@@ -30,11 +30,11 @@ const Cart = () => {
                 {cart.length < 1 ? (
                     <p>No items in the cart</p>
                 ) : (
-                    <div className="flex my-3 gap-3">
+                    <div className="flex lg:flex-row flex-col my-3 gap-3">
                         {/* Cart Items */}
-                        <div className='w-2/3 flex flex-col gap-3'>
+                        <div className='w-full lg:w-2/3 flex flex-col gap-3 order-2 lg:order-1'>
                             {cart.map(item => (
-                                <div key={item.id} className="overflow-hidden bg-white shadow-md rounded-xl hover:shadow-lg transition flex">
+                                <div key={item.id} className="overflow-hidden bg-white shadow-md rounded-xl hover:shadow-lg transition flex ">
                                     {/* Image */}
                                     <div className='w-1/3 h-52 overflow-hidden bg-orange-100 p-5 flex items-center justify-center'>
                                         <img
@@ -51,13 +51,14 @@ const Cart = () => {
                                         <p className="text-orange-600 text-xl">Quantity: {item.quantity}</p>
 
                                         {/* Quantity Controls */}
-                                        <div className="flex gap-3 mt-5">
+                                        <div className="flex items-center gap-3 mt-5">
                                             <button
                                                 className='cursor-pointer text-2xl border border-orange-500 pb-2 w-10 h-10 flex items-center justify-center'
                                                 onClick={() => dispatch(decreaseQuantity(item.id))}
                                             >
                                                 -
                                             </button>
+                                            <span className='text-2xl'>/</span>
                                             <button
                                                 className='cursor-pointer text-2xl border border-orange-500 pb-2 w-10 h-10 flex items-center justify-center'
                                                 onClick={() => dispatch(increaseQuantity(item.id))}
@@ -79,33 +80,35 @@ const Cart = () => {
                         </div>
 
                         {/* Cart Payment Detail */}
-                        <div className='w-1/3 h-fit bg-white shadow-md rounded-xl hover:shadow-lg transition px-3 py-4'>
-                            <p className='text-xl text-orange-600 font-bold mb-4'>
-                                TOTAL: ${total.toFixed(2)}
-                            </p>
+                        <div className='flex flex-col justify-between w-full lg:w-1/3 h-fit min-h-52 bg-white shadow-md rounded-xl hover:shadow-lg transition px-3 py-4 order-1 lg:order-2'>
+                                {/* Cart Summary */}
+                            <div className='cart-summery'>
+                                <p className='text-xl text-orange-600 font-bold mb-4'>
+                                    TOTAL: ${total.toFixed(2)}
+                                </p>
 
-                            {/* Cart Summary */}
-                            <div className="flex flex-col gap-2 mb-4">
-                                {cart.map(item => (
-                                    <div key={item.id} className="flex justify-between text-sm gap-10">
-                                        <div className='flex gap-3'>
-                                        <span className='bg-orange-600 p-2 text-white rounded-full w-5 h-5 flex items-center justify-center mt-1'>{item.quantity}</span>
-                                        <p>{item.title}</p>
+                                <div className="flex flex-col gap-2 mb-4">
+                                    {cart.map(item => (
+                                        <div key={item.id} className="flex justify-between text-sm gap-10">
+                                            <div className='flex gap-3'>
+                                                <span className='bg-orange-600 p-2 text-white rounded-full w-5 h-5 flex items-center justify-center mt-1'>{item.quantity}</span>
+                                                <p>{item.title}</p>
+                                            </div>
+                                            <p>${(item.price * item.quantity).toFixed(2)}</p>
                                         </div>
-                                        <p>${(item.price * item.quantity).toFixed(2)}</p>
-                                    </div>
-                                ))}
+                                    ))}
+                                </div>
                             </div>
 
                             {/* Clear Button */}
                             <div className="flex gap-3">
 
-                                <button
-                                    className='text-md tracking-wider font-semibold text-orange-600 uppercase border border-orange-600 px-3 py-2 w-full hover:text-white hover:bg-orange-600 cursor-pointer'
-                                    onClick={() => dispatch(clearCart())}
+                                <NavLink to="/checkout"
+                                    className='text-md text-center tracking-wider font-semibold text-orange-600 uppercase border border-orange-600 px-3 py-2 w-full hover:text-white hover:bg-orange-600 cursor-pointer'
                                 >
                                     Checkout
-                                </button>
+                                </NavLink>
+                                
                                 <button
                                     className='text-md tracking-wider font-semibold text-orange-600 uppercase border border-orange-600 px-3 py-2 w-full hover:text-white hover:bg-orange-600 cursor-pointer'
                                     onClick={() => dispatch(clearCart())}

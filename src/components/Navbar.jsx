@@ -17,7 +17,7 @@ const Navbar = () => {
         <div className="container m-auto max-w-6xl flex flex-wrap items-center justify-between sm:px-8 px-3 py-3 relative">
             {/* logo */}
             <div className="logo order-2 sm:order-1">
-                <Link to="/"><p className='text-xl text-orange-800 cursor-pointer font-bold'>Clothy</p></Link>
+                <Link to="/"><p className='text-xl text-orange-800 cursor-pointer font-bold'>Shopy</p></Link>
             </div>
 
             {/* Hamburger Icon */}
