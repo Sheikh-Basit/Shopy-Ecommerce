@@ -1,14 +1,15 @@
 import { BrowserRouter as Router, Routes, Route  } from "react-router-dom"
-import HeroSection from "./components/HeroSection"
-import Navbar from "./components/Navbar"
+import Main from "./Pages/Main"
+import Cart from "./Pages/Cart"
 
 function App() {
 
   return (
     <Router>
-      <Navbar/>
+      
       <Routes>
-        <Route path="/" element={<HeroSection/>}/>
+        <Route path="/" element={<Main/>}/>
+        <Route path="/cart" element={<Cart/>}/>
       </Routes>
     </Router>
   )
