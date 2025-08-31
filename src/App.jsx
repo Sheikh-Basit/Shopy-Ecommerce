@@ -3,6 +3,7 @@ import Main from "./Pages/Main"
 import Cart from "./Pages/Cart"
 import ProductDetail from "./Pages/ProductDetail"
 import Checkout from "./Pages/Checkout/Checkout"
+import Footer from "./components/Footer"
 
 function App() {
 
@@ -15,6 +16,8 @@ function App() {
         <Route path="/checkout" element={<Checkout/>}/>
         <Route path="/product/:id" element={<ProductDetail/>}/>
       </Routes>
+
+      <Footer/>
     </Router>
   )
 }
