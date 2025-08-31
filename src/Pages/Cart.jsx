@@ -15,7 +15,7 @@ const Cart = () => {
     const total = cart.reduce((sum, item) => sum + item.price * item.quantity, 0);
 
     return (
-        <div>
+        <div className='min-h-screen'>
             {/* Header */}
             <header className='text-2xl bg-orange-200'>
                 <div className='container m-auto max-w-6xl sm:px-8 px-3 py-3 flex gap-5 items-center text-orange-800'>

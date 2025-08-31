@@ -34,32 +34,32 @@ const ConfirmDetails = ({ activeStep, inputField, HandleNext, HandleBack, bankOp
           <div className="flex flex-col justify-between">
             {/* Name */}
             <div className="flex items-start ">
-              <span className='font-semibold w-1/7'>Name:</span>
-              <span className='font-semibold w-6/7'>{inputField.fullName}</span>
+              <span className='font-semibold w-2/7 sm:w-1/7'>Name:</span>
+              <span className='font-semibold w-5/7 sm:w-6/7'>{inputField.fullName}</span>
 
             </div>
             {/* Email */}
             <div className="flex items-start ">
-              <span className='font-semibold w-1/7'>Email:</span>
-              <span className='font-semibold w-6/7'>{inputField.email}</span>
+              <span className='font-semibold w-2/7 sm:w-1/7'>Email:</span>
+              <span className='font-semibold w-5/7 sm:w-6/7'>{inputField.email}</span>
 
             </div>
             {/* Address */}
             <div className="flex items-start ">
-              <span className='font-semibold w-1/7'>Address:</span>
-              <span className='font-semibold w-6/7'>{inputField.address}</span>
+              <span className='font-semibold w-2/7 sm:w-1/7'>Address:</span>
+              <span className='font-semibold w-5/7 sm:w-6/7'>{inputField.address}</span>
 
             </div>
             {/* Zip Code */}
             <div className="flex items-start ">
-              <span className='font-semibold w-1/7'>Zip Code:</span>
-              <span className='font-semibold w-6/7'>{inputField.zipCode}</span>
+              <span className='font-semibold w-2/7 sm:w-1/7'>Zip Code:</span>
+              <span className='font-semibold w-5/7 sm:w-6/7'>{inputField.zipCode}</span>
 
             </div>
             {/* Payment Method */}
             <div className="flex items-start ">
-              <span className='font-semibold w-1/7'>Payment:</span>
-              <span className='font-semibold w-6/7'>{selectedBankLabel}</span>
+              <span className='font-semibold w-2/7 sm:w-1/7'>Payment:</span>
+              <span className='font-semibold w-5/7 sm:w-6/7'>{selectedBankLabel}</span>
 
             </div>
 

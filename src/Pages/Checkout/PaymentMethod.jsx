@@ -18,7 +18,7 @@ const PaymentMethod = ({ activeStep, inputField, HandleChange, HandleNext, Handl
             />
 
             {inputField.payment === "bank" && (
-              <div className="flex gap-3 ml-8">
+              <div className="flex sm:flex-row flex-col gap-x-3 ml-8">
                 <CustomInputField
                   type='select'
                   name='bank'
@@ -46,7 +46,7 @@ const PaymentMethod = ({ activeStep, inputField, HandleChange, HandleNext, Handl
               <div className="ml-8">
                 <CustomInputField type='text' name='cardNo' label='Card Number' required value={inputField.cardNo} onChange={HandleChange} />
 
-                <div className="flex gap-3">
+                <div className="flex sm:flex-row flex-col gap-x-3">
                   <CustomInputField type='text' name='expiryDate' label='Expiry Date' required value={inputField.expiryDate} onChange={HandleChange} />
                   <CustomInputField type='text' name='cvv' label='CVV' required value={inputField.cvv} onChange={HandleChange} />
 

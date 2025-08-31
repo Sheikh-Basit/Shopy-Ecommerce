@@ -5,7 +5,9 @@ import { FaInstagram, FaLinkedin, FaWhatsapp } from 'react-icons/fa6'
 
 const Footer = () => {
     return (
-        <footer className='container mx-auto max-w-6xl sm:px-8 px-3 py-6 flex items-center justify-between bg-orange-200'>
+        <footer className='bg-orange-200'>
+            <div className='container mx-auto max-w-6xl sm:px-8 px-3 py-6 flex sm:flex-row flex-col gap-5 items-center justify-between'>
+
             <div className="copyright text-orange-800">
                 <p>&copy; 2025 All Rights Reserved</p>
                 <p>Design by Sheikh Abdul Basit</p>
@@ -17,6 +19,7 @@ const Footer = () => {
                 <FaLinkedin className='text-3xl text-orange-600 hover:text-orange-700 cursor-pointer' />
                 <FaInstagram className='text-3xl text-orange-600 hover:text-orange-700 cursor-pointer' />
                 <FaGithubSquare className='text-3xl text-orange-600 hover:text-orange-700 cursor-pointer' />
+            </div>
             </div>
         </footer>
     )

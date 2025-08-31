@@ -11,7 +11,7 @@ const PersonalDetails = ({activeStep,inputField,HandleChange,HandleNext}) => {
               <form onSubmit={HandleNext}>
                 <CustomInputField type='text' name='fullName' label='Full Name' value={inputField.fullName} onChange={HandleChange} />
 
-                <div className="flex gap-3">
+                <div className="flex sm:flex-row flex-col gap-3">
                   <CustomInputField type='email' name='email' label='Email' required value={inputField.email} onChange={HandleChange} />
 
                   {/* zipCode as text to handle length */}

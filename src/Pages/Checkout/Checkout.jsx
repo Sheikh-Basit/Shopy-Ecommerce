@@ -54,7 +54,7 @@ const Checkout = () => {
   }
 
   return (
-    <>
+    <div className='min-h-screen'>
       {/* Header */}
       <header className='text-2xl bg-orange-200'>
         <div className='container m-auto max-w-6xl sm:px-8 px-3 py-3 flex gap-5 items-center text-orange-800'>
@@ -78,14 +78,14 @@ const Checkout = () => {
                     {stepCompleted >= step ? <FaCheck /> : step}
                   </span>
                 </span>
-                <span className={`mt-4 text-sm ${activeStep === step ? '' : 'text-gray-400'}`}>{label}</span>
+                <span className={`mt-4 text-sm text-center ${activeStep === step ? '' : 'text-gray-400'}`}>{label}</span>
               </div>
             )
           })}
         </div>
 
         {/* Checkout Details */}
-        <div className="w-2xl mx-auto flex flex-col gap-5">
+        <div className="w-full sm:w-2xl mx-auto flex flex-col gap-5">
 
           {/* Personal Detail */}
           <PersonalDetails activeStep={activeStep} inputField={inputField} HandleChange={HandleChange} HandleNext={HandleNext} />
@@ -101,7 +101,7 @@ const Checkout = () => {
 
         </div>
       </div>
-    </>
+    </div>
   );
 };
 
