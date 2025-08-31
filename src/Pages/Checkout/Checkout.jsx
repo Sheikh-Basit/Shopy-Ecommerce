@@ -74,7 +74,7 @@ const Checkout = () => {
                   <span className="step-connector-line absolute top-3 mx-5 -left-1/2 right-1/2 h-[1px] bg-gray-400"></span>
                 )}
                 <span className="flex justify-center">
-                  <span className={`text-white pointer-events-none rounded-full ${activeStep === step ? 'bg-orange-500' : 'bg-gray-400'} w-6 h-6 flex items-center justify-center text-sm`}>
+                  <span className={`text-white pointer-events-none rounded-full ${activeStep === step ? 'bg-orange-600' : 'bg-gray-400'} w-6 h-6 flex items-center justify-center text-sm`}>
                     {stepCompleted >= step ? <FaCheck /> : step}
                   </span>
                 </span>

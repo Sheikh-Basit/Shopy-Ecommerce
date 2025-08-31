@@ -47,7 +47,7 @@ const Products = () => {
                         </NavLink>
                         <NavLink to={`/product/${product.id}`} ><h3 className="text-md font-bold mb-2 mx-3 my-2 hover:text-orange-600 cursor-pointer">{product.title}</h3></NavLink>
                         <p className="text-orange-600 text-md mx-3">$ {product.price}</p>
-                        <button className='cursor-pointer absolute bottom-3 right-3 rounded-full bg-orange-600 text-white text-2xl p-2' onClick={() => dispatch(addToCart(product))}><IoCartOutline /></button>
+                        <button className='cursor-pointer absolute bottom-3 right-3 rounded-full bg-orange-600 hover:bg-orange-700 text-white text-2xl p-2' onClick={() => dispatch(addToCart(product))}><IoCartOutline /></button>
                     </div>
                 ))}
             </div>

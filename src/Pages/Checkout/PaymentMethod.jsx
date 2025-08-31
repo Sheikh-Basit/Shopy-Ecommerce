@@ -65,8 +65,8 @@ const PaymentMethod = ({ activeStep, inputField, HandleChange, HandleNext, Handl
 
             {/* Buttons */}
             <div className="flex justify-between mt-8">
-              <span onClick={HandleBack} className='text-orange-500 cursor-pointer'>Back</span>
-              <button type="submit" className='px-3 py-2 bg-orange-500 text-white rounded-md block ml-auto cursor-pointer'>Next</button>
+              <span onClick={HandleBack} className='text-orange-600 cursor-pointer'>Back</span>
+              <button type="submit" className='px-3 py-2 bg-orange-600 hover:bg-orange-700 text-white rounded-md block ml-auto cursor-pointer'>Next</button>
             </div>
 
           </form>

@@ -20,7 +20,7 @@ const PersonalDetails = ({activeStep,inputField,HandleChange,HandleNext}) => {
 
                 <CustomInputField type='textarea' name='address' label='Address' rows='5' required value={inputField.address} onChange={HandleChange} />
 
-                <button type="submit" className='px-3 py-2 bg-orange-500 text-white rounded-md block ml-auto cursor-pointer'>Next</button>
+                <button type="submit" className='px-3 py-2 bg-orange-600 hover:bg-orange-700 text-white rounded-md block ml-auto cursor-pointer'>Next</button>
               </form>
             </div>
           )}

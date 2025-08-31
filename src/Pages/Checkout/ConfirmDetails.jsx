@@ -93,7 +93,7 @@ const ConfirmDetails = ({ activeStep, inputField, HandleNext, HandleBack, bankOp
           {/* Buttons */}
           <div className="flex justify-between mt-8">
             <span onClick={HandleBack} className='text-orange-500 cursor-pointer'>Back</span>
-            <button onClick={HandleNext} className='px-3 py-2 bg-orange-500 text-white rounded-md block ml-auto cursor-pointer'>Confirmed & Place Order</button>
+            <button onClick={HandleNext} className='px-3 py-2 bg-orange-600 hover:bg-orange-700 text-white rounded-md block ml-auto cursor-pointer'>Confirmed & Place Order</button>
           </div>
         </div>
       )}

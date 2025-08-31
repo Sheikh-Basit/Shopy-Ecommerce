@@ -1,9 +1,20 @@
-import React from 'react'
+import React, { useState } from 'react'
 
 // Import Social Icons
 import { FaWhatsapp, FaLinkedin, FaInstagram, FaGithubSquare} from "react-icons/fa";
+import CustomInputField from '../Pages/Checkout/CustomInputField';
 
 const ContactUs = () => {
+    const [contact, setContact] = useState({
+        firstName:"",
+        lastName:"",
+        email:"",
+        message:""
+    })
+
+    const HandleChange = (e) =>{
+        setContact({...contact, [e.target.name]: e.target.value});
+    }
     return (
         <section id="contactus">
             <h2 className='text-3xl text-orange-800 text-center font-bold py-8'>Contact Us</h2>
@@ -14,77 +25,18 @@ const ContactUs = () => {
                 {/* Form */}
                     <form className="">
                         {/* First Name / Last Name */}
-                        <div className="grid md:grid-cols-2 md:gap-6">
-                            <div className="relative z-0 w-full mb-5 group">
-                                <input
-                                    type="text"
-                                    name="floating_first_name"
-                                    id="floating_first_name"
-                                    className="block py-2.5 px-0 w-full text-sm text-gray-900 bg-transparent border-0 border-b-2 border-gray-300 appearance-none focus:outline-none focus:ring-0 focus:border-orange-600 peer"
-                                    placeholder=" "
-                                    required
-                                />
-                                <label
-                                    htmlFor="floating_first_name"
-                                    className="peer-focus:font-medium absolute text-sm text-gray-500 duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:start-0 peer-focus:text-orange-600 peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6"
-                                >
-                                    First name
-                                </label>
-                            </div>
-                            <div className="relative z-0 w-full mb-5 group">
-                                <input
-                                    type="text"
-                                    name="floating_last_name"
-                                    id="floating_last_name"
-                                    className="block py-2.5 px-0 w-full text-sm text-gray-900 bg-transparent border-0 border-b-2 border-gray-300 appearance-none focus:outline-none focus:ring-0 focus:border-orange-600 peer"
-                                    placeholder=" "
-                                    required
-                                />
-                                <label
-                                    htmlFor="floating_last_name"
-                                    className="peer-focus:font-medium absolute text-sm text-gray-500 duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:start-0 peer-focus:text-orange-600 peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6"
-                                >
-                                    Last name
-                                </label>
-                            </div>
+                        <div className="grid md:grid-cols-2 md:gap-3">
+                            <CustomInputField type='text' name='firstName' value={contact.firstName} label='First Name' required onChange={HandleChange}/>
+
+                            <CustomInputField type='text' name='lastName' value={contact.lastName} label='Last Name' required onChange={HandleChange}/>
+                            
                         </div>
 
                         {/* Email */}
-                        <div className="relative z-0 w-full mb-5 group">
-                            <input
-                                type="email"
-                                name="floating_email"
-                                id="floating_email"
-                                className="block py-2.5 px-0 w-full text-sm text-gray-900 bg-transparent border-0 border-b-2 border-gray-300 appearance-none focus:outline-none focus:ring-0 focus:border-orange-600 peer"
-                                placeholder=" "
-                                required
-                            />
-                            <label
-                                htmlFor="floating_email"
-                                className="peer-focus:font-medium absolute text-sm text-gray-500 duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:start-0 peer-focus:text-orange-600 peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6"
-                            >
-                                Email address
-                            </label>
-                        </div>
+                            <CustomInputField type='email' name='email' value={contact.email} label='Email' required onChange={HandleChange}/>
 
                         {/* Message */}
-                        <div className="relative z-0 w-full mb-5 group">
-                            <textarea
-                                type="text"
-                                name="floating_message"
-                                rows={5}
-                                id="floating_message"
-                                className="block py-2.5 px-0 w-full text-sm text-gray-900 bg-transparent border-0 border-b-2 border-gray-300 appearance-none focus:outline-none focus:ring-0 focus:border-orange-600 peer"
-                                placeholder=" "
-                                required
-                            />
-                            <label
-                                htmlFor="floating_message"
-                                className="peer-focus:font-medium absolute text-sm text-gray-500 duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:start-0 peer-focus:text-orange-600 peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6"
-                            >
-                                Message
-                            </label>
-                        </div>
+                            <CustomInputField type='textarea' name='message' value={contact.message} label='Message' rows='5' required onChange={HandleChange}/>
 
                         <button
                             type="submit"
@@ -96,10 +48,10 @@ const ContactUs = () => {
 
                     {/* Social Icons */}
                     <div className="flex items-center mt-8 gap-5">
-                        <FaWhatsapp className='text-3xl text-orange-800 hover:text-orange-500 cursor-pointer' />
-                        <FaLinkedin className='text-3xl text-orange-800 hover:text-orange-500 cursor-pointer' />
-                        <FaInstagram className='text-3xl text-orange-800 hover:text-orange-500 cursor-pointer' />
-                        <FaGithubSquare className='text-3xl text-orange-800 hover:text-orange-500 cursor-pointer' />
+                        <FaWhatsapp className='text-3xl text-orange-600 hover:text-orange-700 cursor-pointer' />
+                        <FaLinkedin className='text-3xl text-orange-600 hover:text-orange-700 cursor-pointer' />
+                        <FaInstagram className='text-3xl text-orange-600 hover:text-orange-700 cursor-pointer' />
+                        <FaGithubSquare className='text-3xl text-orange-600 hover:text-orange-700 cursor-pointer' />
                     </div>
                 </div>
 

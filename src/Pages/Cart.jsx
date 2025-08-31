@@ -69,7 +69,7 @@ const Cart = () => {
 
                                         {/* Delete Button */}
                                         <button
-                                            className='cursor-pointer absolute bottom-3 right-0 rounded-full bg-orange-600 text-white text-2xl p-2'
+                                            className='cursor-pointer absolute bottom-3 right-0 rounded-full bg-orange-600 hover:bg-orange-700 text-white text-2xl p-2'
                                             onClick={() => dispatch(deleteFromCart(item.id))}
                                         >
                                             <RiDeleteBin6Line />
