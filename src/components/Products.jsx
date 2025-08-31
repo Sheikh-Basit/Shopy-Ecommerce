@@ -41,8 +41,8 @@ const Products = () => {
                         className="overflow-hidden bg-white shadow-md rounded-2xl hover:shadow-lg transition pb-3 relative"
                     >
                         <NavLink to={`/product/${product.id}`}>
-                            <div className='w-full h-64 overflow-hidden bg-orange-100 p-5 cursor-pointer'>
-                                <img src={product.image} alt={product.title} className='w-full h-full object-fit' />
+                            <div className='w-full h-64 overflow-hidden bg-orange-100 p-3 cursor-pointer'>
+                                <img src={product.image} alt={product.title} className='w-full h-full object-contain' />
                             </div>
                         </NavLink>
                         <NavLink to={`/product/${product.id}`} ><h3 className="text-md font-bold mb-2 mx-3 my-2 hover:text-orange-600 cursor-pointer">{product.title}</h3></NavLink>

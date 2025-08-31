@@ -2,7 +2,7 @@ import { BrowserRouter as Router, Routes, Route  } from "react-router-dom"
 import Main from "./Pages/Main"
 import Cart from "./Pages/Cart"
 import ProductDetail from "./Pages/ProductDetail"
-import Checkout from "./Pages/Checkout"
+import Checkout from "./Pages/Checkout/Checkout"
 
 function App() {
 
