@@ -32,5 +32,5 @@ The project showcases modern frontend practices with routing, state management, 
 
 1. Clone the repository:
    ```bash
-   git clone https://github.com/Sheikh-Basit/Shopy-ecommerce.git
+   git clone https://github.com/Sheikh-Basit/Shopy-Ecommerce.git
    cd shopy-ecommerce
