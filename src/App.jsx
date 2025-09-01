@@ -11,7 +11,7 @@ function App() {
     <Router>
       
       <Routes>
-        <Route path="/" element={<Main/>}/>
+        <Route path="/Shopy-Ecommerce" element={<Main/>}/>
         <Route path="/cart" element={<Cart/>}/>
         <Route path="/checkout" element={<Checkout/>}/>
         <Route path="/product/:id" element={<ProductDetail/>}/>

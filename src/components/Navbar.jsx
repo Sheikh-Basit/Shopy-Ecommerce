@@ -2,6 +2,9 @@ import React, { useState } from 'react'
 // Cart Icon
 import { IoCartOutline } from "react-icons/io5";
 
+// Logo
+import logo from '../assets/logo.png'
+
 // Hamburger
 import { GiHamburgerMenu } from "react-icons/gi";
 
@@ -16,8 +19,10 @@ const Navbar = () => {
     <header className='bg-orange-200 fixed top-0 left-0 w-full z-100'>
         <div className="container m-auto max-w-6xl flex flex-wrap items-center justify-between sm:px-8 px-3 py-3 relative">
             {/* logo */}
-            <div className="logo order-2 sm:order-1">
-                <Link to="/"><p className='text-xl text-orange-800 cursor-pointer font-bold'>Shopy</p></Link>
+            <div className="logo order-2 sm:order-1 ">
+                <Link to="/Shopy-Ecommerce"><p className='text-xl text-orange-800 cursor-pointer font-bold flex items-center'>
+                    <img src={logo} alt="logo" className='w-10'/>
+                    Shopy</p></Link>
             </div>
 
             {/* Hamburger Icon */}
