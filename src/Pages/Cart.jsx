@@ -19,7 +19,7 @@ const Cart = () => {
             {/* Header */}
             <header className='text-2xl bg-orange-200'>
                 <div className='container m-auto max-w-6xl sm:px-8 px-3 py-3 flex gap-5 items-center text-orange-800'>
-                    <NavLink to="/"><RxCross2 className='mt-1' /> </NavLink>
+                    <NavLink to="/Shopy-Ecommerce"><RxCross2 className='mt-1' /> </NavLink>
                     <p>Cart</p>
                 </div>
             </header>
